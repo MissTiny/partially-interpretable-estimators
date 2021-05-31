@@ -104,7 +104,9 @@ Our model achieves the following performance with the given example Pre-trained 
 | gridp              |     .049        |      .328      |
 | parkinsons         |     .002        |      .900      |
 | winequality        |     .532        |      .566      |
-
+| blog               |     .530        |      .315      |
+| crime              |     .043        |      .973      |
+| glucose            |     .102        |      .982      |
 #### Classification
 
 <!-- 
