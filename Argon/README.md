@@ -122,6 +122,11 @@ Rscript parallelFinal.R adult $count adult_errorMat.csv
 ## Result
 For each fold of the data, we selected the model with the best parameter set to evaluate the performance. And then with five fold cross-validation method, we obtained 5 results (one result for each fold) and averaged those to report in the paper. In this case, each fold may has a different parameter setting compared with other fold.
 
+The above command will generated a csv that contains all attemps.
+
+For PIE result, we select the parameter set that has a relative good interpretability and a high validation RPE.
+For Sparse PIE result, we select the parameter set that has a relative good interpretability and a high validation RPE but limit the number of feature into 8. 
+
 ## Contributing
 
 >📋  Pick a licence and describe how to contribute to your code repository. 
