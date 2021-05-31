@@ -1,0 +1,11 @@
+tensorflow>=1.15
+numpy>=1.15.2
+sklearn
+pandas>=0.24
+absl-py
+
+python/3.8.8_gcc-9.3.0
+py-tensorflow/2.4.1_gcc-9.3.0
+py-pandas/1.2.3_gcc-9.3.0
+py-scikit-learn/0.24.1_gcc-9.3.0
+py-absl-py/0.10.0_gcc-9.3.0
