@@ -13,14 +13,16 @@ To install requirements for PIE model:
 Rscript requirements.R
 ```
 ## Regression
-Folder **Regression** contains the training processof regression task presented in the paper.
+Folder **Regression** contains the training process of regression task presented in the paper.
+In the folder, "parkinsons_load.R" is provided as an example. To get the RData file of the dataset, run "parkinsons_load.R". 
+For other datasets, please see the pretrained model, or create similar data loading R file.
+
 Following are the parameters setting and training command:
 
 ```train
 ##load functions
 Rscript load_functions.R
 echo "function load finished"
-
 
 #Parameter Tuning set
 count=0
@@ -70,6 +72,9 @@ Rscript sparsity_parallelFinal.R CASP $count CASP_sparsity.csv CASP_sparsityCV.c
 
 ## Classification
 Folder **Classification** contains the training processof classification task presented in the paper.
+In the folder, "adult_load.R" is provided as an example. To get the RData file of the dataset, run "adult_load.R". 
+For other datasets, please see the pretrained model, or create similar data loading R file.
+
 Following are the parameters setting and training command:
 ```
 ##load functions
@@ -120,12 +125,11 @@ echo "start summing all outcomes finished"
 Rscript parallelFinal.R adult $count adult_errorMat.csv
 ```
 ## Result
-For each fold of the data, we selected the model with the best parameter set to evaluate the performance. And then with five fold cross-validation method, we obtained 5 results (one result for each fold) and averaged those to report in the paper. In this case, each fold may has a different parameter setting compared with other fold.
+From the command above, you can easily see the parameter tuning range.
+Since we applied 5-fold cross-validation on each dataset, the final result reported in the paper is the average of performance for each fold and the standard deviation of the five result is provided as error bars as well. Thus, for each fold, we select model with the best performance on the validation data and then predict with the test data.
 
-The above command will generated a csv that contains all attemps.
-
-For PIE result, we select the parameter set that has a relative good interpretability and a high validation RPE.
-For Sparse PIE result, we select the parameter set that has a relative good interpretability and a high validation RPE but limit the number of feature into 8. 
+The selection standard for PIE result is high validation RPE and a relative good interpretability.
+For Sparse PIE result, the selection standard is similar to the PIE selection standard, plus a limitation of less than or equal to 8 features.
 
 ## Contributing
 
