@@ -92,9 +92,10 @@ Rscript Evaluate_Classification.R train.RData
 ## Pre-trained Models and Data Splits
 Since we applied 5-fold cross-validation on each dataset, the final result reported in the paper is the average of performance for each fold and the standard deviation of the five result is provided as error bars as well. Thus, for each fold, we select model with the best performance on the validation data and then predict with the test data. In this case, you may find out that the result computed from given model is not the same as the result provided by the paper. The result reported in this github is just the result from one single model not the average of 5 models.
 
-```diff
-- Due to the storage limitation of github, we are unable to provide all models in this github. Other models can be provided upon request. 
-```
+The way of 5-fold data splitting is also shown in the RData file.
+
+**Due to the storage limitation of github, we are unable to provide all models in this github. Other models can be provided upon request.**
+
 
 You can download pre-trained RData files of models from the folder **Pre-trained Models**.
 
@@ -103,9 +104,8 @@ You can download pre-trained RData files of models from the folder **Pre-trained
 ### Result Associated with Given Pre-trained Model
 Our model achieves the following performance with the given example Pre-trained Models:
 
-```diff
-- Note: The following result is different from the result shown in the paper because our paper reports the average result of 5-fold(5 models) and the following is just the result for one sigle model.
-```
+**Note: The following result is different from the result shown in the paper because our paper reports the average result of 5-fold(5 models) and the following is just the result for one sigle model.**
+
 
 | Dataset            |   PIE - RPE     |   PIE - pi     |
 | ------------------ |---------------- | -------------- |
