@@ -80,43 +80,36 @@ Rscript Evaluate_Classification.R train.RData
 ```
 >📋  The description and function above describes how to evaluate a simple model.
 
-## Pre-trained Models
-The final result of PIE performance on one dataset is selected by tuning parameters with 5-fold cross validation method. Thus, we picked the best performance model of each fold and average the result. During the training procedure, hundreds of models are trained. It is hard to provide all models, therefore, we would provide one model of each dataset as an example.
+## Pre-trained Models and Data Splits
+Since we applied 5-fold cross-validation on each dataset, the final result reported in the paper is the average of performance for each fold and the standard deviation of the five result is provided as error bars as well. Thus, for each fold, we select model with the best performance on the validation data and then predict with the test data. In this case, you may find out that the result computed from given model is not the same as the result provided by the paper. The result reported in this github is just the result from one single model not the average of 5 models.
+
+- Due to the storage limitation of github, we are unable to provide all models in this github. Other models can be provided upon request. 
 
 You can download pre-trained RData files of models from the folder **Pre-trained Models**.
 
-<!-- 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
--->
 ## Results
 
 ### Result Associated with Given Pre-trained Model
 Our model achieves the following performance with the given example Pre-trained Models:
 
-#### Regression
+- Note: The following result is different from the result shown in the paper because our paper reports the average result of 5-fold(5 models) and the following is just the result for one sigle model.
+
 | Dataset            |   PIE - RPE     |   PIE - pi     |
 | ------------------ |---------------- | -------------- |
-| CASP               |     .377        |      .482      |
 | CBM                |     .000        |      1.00      |
 | energyp            |     .458        |      .267      |
-| gridp              |     .049        |      .328      |
 | parkinsons         |     .002        |      .900      |
 | winequality        |     .532        |      .566      |
 | blog               |     .530        |      .315      |
 | crime              |     .043        |      .973      |
 | glucose            |     .102        |      .982      |
-#### Classification
+
 
 <!-- 
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 -->
 ## 5-fold Cross-Validation PIE Model Training
 To fully replicate the training process demonstrated in the paper, please reference to the readme file in **Argon** folder.
-
-## Data Split
-All the dataset reported in the paper is uploaded in the **Data** folder in RData format.
 
 ## Baseline
 Please Reference to the **Baseline** folder.

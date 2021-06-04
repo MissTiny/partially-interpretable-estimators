@@ -17,7 +17,7 @@ Rscript baseline_requirements.R
 <!-- 
 >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 -->
-## Normal Baseline
+## Lasso_Gam_Xgboost
 This folder contains the baseline coding functions for both regression and classification. Also an example of CASP dataset and the baseline running code is included in this file. 
 In the paper, we uses Lasso, GAM, XGBoost as baselines
 
